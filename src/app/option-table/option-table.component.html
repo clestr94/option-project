@@ -1,0 +1,24 @@
+<div class="option-table align-content-center">
+  <h5>{{tableName}}</h5>
+  <table class="table">
+  <thead class="bg-light">
+    <tr>
+      <th *ngFor="let col of header">{{col}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <td>{{row["Contract Name"]}}</td>
+      <td>{{row["Last Trade Date"]}}</td>
+      <td>{{row["Strike"]}}</td>
+      <td>{{row["Last Price"]}}</td>
+      <td>{{row["Bid"]}}</td>
+      <td>{{row["Ask"]}}</td>
+      <td>{{row["Change"]}}</td>
+      <td>{{row["% Change"]}}</td>
+      <td>{{row["Volume"]}}</td>
+      <td>{{row["Open Interest"]}}</td>
+      <td>{{row["Implied Volatility"]}}</td>
+  </tbody>
+</table>
+</div>
