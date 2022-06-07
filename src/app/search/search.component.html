@@ -1,0 +1,66 @@
+ <div class="container-fluid col-md-6">
+    <form class="d-flex input-group w-auto justify-content-center">
+      <input
+        type="search"
+        class="form-control rounded"
+        placeholder="CBOE"
+        aria-label="Search"
+        aria-describedby="search"
+        name="search"
+        id = ticker
+        [(ngModel)]="ticker"
+      />
+      <span class="input-group-text text-white border-0" id="search-addon">
+        <i class="fas fa-search"></i>
+      </span>
+    </form>
+       <form type=button class="btn btn-primary" href="" (click)="callService()">Submit</form>
+  </div>
+
+ <div *ngIf="result">
+
+   <h5>Calls</h5>
+   <table class="table">
+  <thead class="bg-light">
+    <tr>
+      <th *ngFor="let col of result['calls']['header']">{{col}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of result['calls']['body']">
+      <td>{{row["Contract Name"]}}</td>
+      <td>{{row["Last Trade Date"]}}</td>
+      <td>{{row["Strike"]}}</td>
+      <td>{{row["Last Price"]}}</td>
+      <td>{{row["Bid"]}}</td>
+      <td>{{row["Ask"]}}</td>
+      <td>{{row["Change"]}}</td>
+      <td>{{row["% Change"]}}</td>
+      <td>{{row["Volume"]}}</td>
+      <td>{{row["Open Interest"]}}</td>
+      <td>{{row["Implied Volatility"]}}</td>
+  </tbody>
+</table>
+   <h5>Puts</h5>
+   <table class="table">
+  <thead class="bg-light">
+    <tr>
+      <th *ngFor="let col of result['puts']['header']">{{col}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of result['puts']['body']">
+      <td>{{row["Contract Name"]}}</td>
+      <td>{{row["Last Trade Date"]}}</td>
+      <td>{{row["Strike"]}}</td>
+      <td>{{row["Last Price"]}}</td>
+      <td>{{row["Bid"]}}</td>
+      <td>{{row["Ask"]}}</td>
+      <td>{{row["Change"]}}</td>
+      <td>{{row["% Change"]}}</td>
+      <td>{{row["Volume"]}}</td>
+      <td>{{row["Open Interest"]}}</td>
+      <td>{{row["Implied Volatility"]}}</td>
+  </tbody>
+</table>
+   </div>

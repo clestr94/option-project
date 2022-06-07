@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { NgModel } from "@angular/forms";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
