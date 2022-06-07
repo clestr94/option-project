@@ -12,6 +12,7 @@ import { OptionTableComponent } from './option-table/option-table.component';
 import { ScrapeService } from "./service/scrape-service";
 import { FormsModule } from '@angular/forms';
 import { NgControl } from '@angular/forms';
+import {MdbDropdownModule} from "mdb-angular-ui-kit/dropdown";
 
 
 
@@ -29,7 +30,8 @@ import { NgControl } from '@angular/forms';
     NgbModule,
     MdbCollapseModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MdbDropdownModule
   ],
   providers: [ScrapeService],
   bootstrap: [AppComponent]

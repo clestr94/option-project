@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {header, rows} from "../sample-data";
 
 @Component({
   selector: 'app-option-table',
