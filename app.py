@@ -9,6 +9,7 @@ CORS(app)
 
 @app.route("/")
 def hello_world():
+  return "<p>API is running</p>"
   pass
 
 
